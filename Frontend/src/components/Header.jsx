@@ -7,8 +7,8 @@ function Header() {
   const isLoggedIn = useSelector((store) => store.user.isLoggedIn);
 
   return (
-    <div className='flex justify-between items-center px-12 py-2 bg-[#246186] h-[70px]'>
-      {<div className='flex items-center justify-center gap-2 text-xl font-semibold text-white'>
+    <div className='flex justify-between items-center px-12 py-2 bg-[#246186] h-[70px] fixed top-0 left-0 right-0'>
+      {<div className='flex items-center justify-center gap-2 text-xl font-semibold text-white ml-[-30px]'>
         <IoIosMenu className='text-3xl font-extrabold' />
         <h3 className=''>
           Menu
@@ -24,7 +24,7 @@ function Header() {
       <div className=''>
         <Link to={"signup"}>
           <button
-            className='bg-[#663FAE] p-2 px-3 rounded-md hover:bg-[#392167] active:bg-[#21123e] text-white font-bold text-sm'
+            className='bg-[#663FAE] p-2 px-3 rounded-md hover:bg-[#392167] active:bg-[#21123e] text-white font-bold text-sm mr-[-20px]'
             type='button'>
             Sign Up
           </button>

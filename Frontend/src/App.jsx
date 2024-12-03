@@ -4,6 +4,7 @@ import { store } from './redux/store.js'
 import Header from "./components/Header.jsx"
 import Footer from "./components/Footer.jsx"
 
+
 function App() {
 
   return (
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <Outlet />
         <Footer />
+    
       </Provider>
     </>
   )
