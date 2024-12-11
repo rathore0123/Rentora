@@ -2,22 +2,27 @@ import React,{useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import Googlemap from "./Googlemap";
+import Property from "./Property";
 
 function Filter(){
     const [isOpen, setIsOpen] = useState(false);
+    
+    
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
     const [isOpen3, setIsOpen3] = useState(false);
     const [isOpen4, setIsOpen4] = useState(false);
     return(
         <React.Fragment>
-            <div className='h-[1000px] w-auto flex'>
-                  <div className='h-[60px] w-auto border-0 shadow mt-[70px] fixed left-0 right-0'>
+            <div className='h-[640px] w-auto flex'>
+                  <div className='h-[60px] w-auto border mt-[70px] fixed left-0 right-0 z-[2]'>
                         <input type="text" placeholder=" Search Location" className=' h-[43px] w-[530px] ml-[20px] mt-[9px] ps-3 border rounded' ></input>
                         <FontAwesomeIcon icon={faMagnifyingGlass}  className="ml-[-30px]"/>
 
-                    <div className="relative inline-block text-left">
-                        <button onClick={() => setIsOpen(!isOpen)} className="px-6 py-2 ml-[30px] mt-[-4px] border hover:shadow rounded text-black">
+                    <div className="relative inline-block text-left"
+                     onBlur={() => setIsOpen(false)}
+                     tabIndex={0}>
+                        <button onClick={() => setIsOpen(!isOpen)} className="px-6 py-2 ml-[30px] mt-[-4px] border hover:shadow rounded text-black ">
                         BHK <FontAwesomeIcon icon={faChevronDown} />
                         </button>
                        {isOpen && (
@@ -31,7 +36,7 @@ function Filter(){
                         </ul>)}
                     </div>
 
-                    <div className="relative inline-block text-left">
+                    <div className="relative inline-block text-left" onBlur={() => setIsOpen1(false)} tabIndex={0}>
                         <button onClick={() => setIsOpen1(!isOpen1)} className="px-6 py-2 ml-[15px] border hover:shadow rounded text-black">
                         Price <FontAwesomeIcon icon={faChevronDown} />
                         </button>
@@ -43,7 +48,7 @@ function Filter(){
                     </div>
 
 
-                    <div className="relative inline-block text-left">
+                    <div className="relative inline-block text-left" onBlur={() => setIsOpen2(false)} tabIndex={0}>
                         <button onClick={() => setIsOpen2(!isOpen2)} className="px-8 py-2 ml-[15px] mt-[-4px] border hover:shadow rounded text-black">
                         Furnishing <FontAwesomeIcon icon={faChevronDown} />
                         </button>
@@ -56,7 +61,7 @@ function Filter(){
                         </ul>)}
                     </div>
 
-                    <div className="relative inline-block text-left">
+                    <div className="relative inline-block text-left"  onBlur={() => setIsOpen3(false)} tabIndex={0}>
                         <button onClick={() => setIsOpen3(!isOpen3)} className="px-4 py-2 ml-[15px] border hover:shadow rounded text-black">
                         Property-Type <FontAwesomeIcon icon={faChevronDown} />
                         </button>
@@ -69,7 +74,7 @@ function Filter(){
                         </ul>)}
                     </div>
 
-                    <div className="relative inline-block text-left">
+                    <div className="relative inline-block text-left"  onBlur={() => setIsOpen4(false)} tabIndex={0}>
                         <button onClick={() => setIsOpen4(!isOpen4)} className="px-4 py-2 ml-[15px] border hover:shadow rounded text-black ">
                         Preferred Tenants <FontAwesomeIcon icon={faChevronDown} />
                         </button>
@@ -83,6 +88,7 @@ function Filter(){
                     </div>
                 </div>
                 <Googlemap/>
+                <Property/>
             </div>      
         </React.Fragment> 
     )
