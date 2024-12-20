@@ -13,12 +13,19 @@ function Header() {
   }
 
   return (
+<<<<<<< HEAD
     <div className='flex justify-between items-center px-12 py-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 h-[70px]'>
       <div className='flex items-center justify-center gap-2 text-xl font-semibold text-white'>
         <div className='cursor-pointer text-3xl font-extrabold' onClick={toggleMenu}>
           {isMenuToggled ? (<MdClose />) : (<IoIosMenu />)}
         </div>
         <h3 onClick={toggleMenu} className='cursor-pointer'>
+=======
+    <div className='flex justify-between items-center px-12 py-2 bg-[#246186] h-[70px] fixed top-0 left-0 right-0'>
+      {<div className='flex items-center justify-center gap-2 text-xl font-semibold text-white ml-[-30px]'>
+        <IoIosMenu className='text-3xl font-extrabold' />
+        <h3 className=''>
+>>>>>>> 5d9db3108f6d90481df721dbe0098b383d006986
           Menu
         </h3>
       </div>
@@ -32,7 +39,11 @@ function Header() {
       <div className='flex justify-center items-center gap-2'>
         <Link to={"signup"}>
           <button
+<<<<<<< HEAD
             className='bg-purple-700 p-2 px-3 rounded-md hover:bg-purple-800 active:bg-purple-900 text-white font-bold text-sm shadow-md transition-colors duration-200'
+=======
+            className='bg-[#663FAE] p-2 px-3 rounded-md hover:bg-[#392167] active:bg-[#21123e] text-white font-bold text-sm mr-[-20px]'
+>>>>>>> 5d9db3108f6d90481df721dbe0098b383d006986
             type='button'>
             Sign Up
           </button>

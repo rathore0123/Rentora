@@ -6,6 +6,8 @@ import { createRoot } from 'react-dom/client'
 import HomePage from './components/HomePage.jsx'
 import { RouterProvider, createBrowserRouter, Route, createRoutesFromElements } from 'react-router-dom'
 import Signup from './components/Signup.jsx'
+import Filter from './components/filter.jsx'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +15,7 @@ const router = createBrowserRouter(
       <Route path='' element={<HomePage />}/>
       <Route path='signin' element={<Signin />}/>
       <Route path='signup' element={<Signup />}/>
+      <Route path='login-home' element={<Filter/>}/>
     </Route>
   )
 )
