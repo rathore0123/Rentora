@@ -9,10 +9,10 @@ function Card({
     className,
 }) {
     return (
-        <div className={`card ${className} p-3 rounded-md bg-white mx-5 cursor-pointer hover:scale-105 duration-300`}>
+        <div className={`card ${className} p-3 rounded-md bg-white mx-1 border-2 cursor-pointer hover:scale-105 duration-300`}>
             <img src={image} 
             alt="House_Image"
-            className='w-full h-1/2 rounded-md mb-2'
+            className='w-full h-1/2 rounded-md '
             />
             <div className='house-details text-slate-600 font-semibold'>
                 <p>Price: {price}</p>
